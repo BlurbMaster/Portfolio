@@ -1,0 +1,131 @@
+From:	SWAMP::HUTTON       "This is commerce, not your hobby." 19-MAR-1997 03:05:24.89
+To:	SMTP%"all_staff@promis.com"
+CC:	HUTTON
+Subj:	What I did on my Spring Break in Japan
+
+I thought that my trip to Fujitsu/AMD in Aizu-Wakamatsu, Japan would be
+of enough general interest (both due to the location and the large
+scale of the client) to warrant sending out this blurb on a typical
+day in the life of a PROMIS, on-site consultant.
+
+The day starts at 0810 hrs with the company anthem, daily exhortation
+from the office section boss and so forth.  The office is about the
+size of a football field and has no dividers: just desks and other
+office equipment laid out in the traditional "circuit board" Japanese
+office layout.  The bosses are by the window facing into the room and
+perpendicular to them are banks of desks and various computer printers.
+The secretary for each section is at the end nearest the boss.
+
+As the day progresses, the PA system chimes (the same tune that big
+clock towers use before tolling out the hour) to announce the various
+cycles of the day.  Our section's nutrition cycle is at 1228 hrs when
+another section finishes with the cafeteria.  It lasts for about
+half an hour.  The cafeteria also has a travel agency, camera shop,
+banking machines, battery vending machines and so on.
+
+The day goes until at least 1900 hrs; which works out to an average
+10 1/2 hour day.  I have, however, been here until 2100 hrs for a 
+12 1/2 hour day.  Some of the Japanese are typically here longer;
+the stuff about karuchi "Death by overwork" is no joke!  Takahashi-san,
+of DEC-Japan was returning here from Tokyo on Sunday night when his
+bullet-train automatically switched off during an earthquake.  By the
+time the quake was over and they'd reset the train he'd missed the last
+connecting train: Wakamatsu is a milk-run from the main Tokyo <->
+Sendai line.  So he slept somewhere, I think in the train station,
+until the first train in the morning so that he could pick me up
+at 0720 hrs in my hotel lobby.
+
+PROMIS, as we sell it to our customers, is just a small part of the
+overall information structure that FASL (Fujitsu/AMD Semi-Conductor
+Limited) needs to operate.  There is code originally written by
+Tokyo Electron that is now maintained by DEC-Japan.  There is code
+originally written by DEC-Japan and also custom code written by FASL
+personnel.  All of this dangles off of and depends on standard PROMIS
+in some way.  In addition to this complexity, there is a host of
+slightly incompatible Kanji display systems, English display systems
+and huge networks.  To complete the fun, FASL is remodelling and
+upgrading their computer centre to handle a new Fab: we all know what
+joy that is from our recent move to our new office!
+
+So, not surprisingly, most of my time is spent sorting through the
+bug lists to try and see which of them are actually PROMIS problems.
+It's not that anyone is trying to pin their problems on us but rather
+that it's really hard to tell where these difficulties start from and
+if there isn't an on-site technician intimately familiar with PROMIS
+then problems of unknown province tend to thought of as coming from
+the most unknown system around: i.e. we get the blame.
+
+A pair of typical examples will show you what I mean.  When Quick Chart
+displays are set to Kanji, the title falls off the bottom.  The
+Quick Chart subsystem here has code from all four sources so who
+should look into it?  I did for a short time but stopped when someone
+else figured out that it was a hardware problem.  Another good one is
+that the TP server is sending out mail messages in English to Japanese
+operators.  TP problem?  NLS problem?  DEC-Japan Kanji customization
+problem?  Middleware problem?  It turned out that someone had set
+the TP PROMIS account to English because DEC-Kanji mail messages
+make the HP-Kanji mail delivery systems fall over.  Off of my target
+range it goes into someone else's job jar.
+
+And then sometimes, just because I'm a captive PROMIS guru, I get
+dragged into operational problems on the 5.2.4 system here.  This is
+huge and any tiny logic warp in PROMIS causes big problems.  One 
+limitation in our material constraint logic is causing them to have
+to consider ZORCHing 400 lots next week.  There's also another problem
+where PROMIS traces back when they try to release a tracking hold on
+a lot.  Lots were piling up to the operator's nose and I really
+couldn't leave, even though it was 1930 hrs, without losing "face"
+as they say here.  This was, by the way, how I ended up here till 2100
+hrs.  It all turned out well though.  Takahasi-san and I looked at
+it for an hour or so and then I announced that the tracebacks would
+stop if they added lot comments (annotations to the PROMIS logs for
+each lot) that said "Please stop tracing back, Hutton-san wishes to
+return to his hotel."  This did the trick; once again proving the
+value of an on-site consultant!  (Techie details to tracking wizards
+later.)
+
+I, of course, can't and shouldn't do everything for them but neither
+can I afford to take a narrow, legalistic view of what is and isn't
+our responsibility.  Remember that what we're selling to our customers
+isn't a product but rather solutions.  No one cares about product
+sellers these days.  So, my task isn't really to make PROMIS v5.3.1
+"work" according to some spec sheet.  Rather it's to do everything in
+my areas of expertise to solve the problem of getting FASL's
+information systems working to their satisfaction through their
+entire range of upgrades.  It's just that many of my areas of 
+expertise happen to relate to PROMIS and that PROMIS is one of the
+upgrades.
+
+Cultural note:  Japan has very advanced toilet technology.  Some of
+them have a sink built into the top which drain into the tank.  Thus
+the tank can refill without affecting your water pressure as you wash
+your hands.  There are also water conserving models which have "big"
+and "little" flushes.  If you have simply urinated then you turn the
+handle to the right for a quick slurp: otherwise you turn it to the
+left for a full splash.
+
+There are also Asian style "squat" toilets and Western style "sit-down"
+toilets.  These latter often have electrically heated seats.  It is
+a favourite trick here at FASL to turn the control on the seat up to
+"extra-crispy" just before leaving the stall.  I fell prey to this
+prank on my first day here and started to think that I had made a very
+bad choice at lunch!
+
+In Tokyo, there are quite clean public washrooms absolutely everywhere.
+This is a big improvement on Toronto where there are almost none. But
+remember to bring your own hand towels as most of them have no towels
+or hand-dryers.  If you are male, also remember that the cleaning
+ladies are quite likely to stroll in and start cleaning up around
+your feet as you go about your business.  Just act non-chalant and
+return her cheery "good afternoon" greetings.  This isn't considered
+at all rude here.  In fact, although all washrooms here have separate
+male and female entrances, the doors don't necessarily go to different
+rooms.
+
+A reverse example, something that is rude here but not in Canada, is
+walking around while eating.  You just *don't* do that here.  Well,
+except for ice-cream but even then the restriction is only lifted
+outdoors.
+
+				/Don-san
+
