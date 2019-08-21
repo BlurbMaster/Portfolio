@@ -9,3 +9,5 @@ and as an example of the sort of reports that I do.
 
 The JapanTrip.txt is my famous trip report on my fabulous gig as a
 consultant in Japan.
+
+See also the WordPress website that I built for a client at vincentmurieldenturist.ca
